@@ -1,0 +1,18 @@
+<h2>Welcome to {{hotelName}}</h2>
+
+<div [hidden]="hideRooms">
+    <h3>Number of Rooms</h3>
+    <div [ngStyle]="{'color':rooms.avialableRooms?'green':'red'}" [innerText]="numberOfRooms"></div>
+</div>
+
+
+<div *ngIf="rooms.avialableRooms>0">
+    Rooms List
+    <hinv-rooms-list [roomList]="roomList" ></hinv-rooms-list>
+</div>
+
+
+
+
+
+<button (click)="toggle()">Toggle</button>
